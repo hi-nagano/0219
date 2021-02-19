@@ -1,0 +1,367 @@
+Last login: Thu Feb 18 18:44:31 on ttys001
+hiroyuki@naganohiroakinoMacBook-Air ~ % git version
+git version 2.24.3 (Apple Git-128)
+hiroyuki@naganohiroakinoMacBook-Air documents % git config --hiroyuki@naganohiroakinoMacBook-Air documents % git config --global user.name "hi-nagano"
+hiroyuki@naganohiroakinoMacBook-Air documents % git config --global user.email hyans2007@gmail.com
+hiroyuki@naganohiroakinoMacBook-Air documents % cd ~
+hiroyuki@naganohiroakinoMacBook-Air ~ % ls
+Applications	Downloads	Music
+Desktop		Library		Pictures
+Documents	Movies		Public
+hiroyuki@naganohiroakinoMacBook-Air ~ % cd documents
+hiroyuki@naganohiroakinoMacBook-Air documents % cd 0218
+hiroyuki@naganohiroakinoMacBook-Air 0218 % ls
+Untitled-1.txt
+hiroyuki@naganohiroakinoMacBook-Air 0218 % git init
+Initialized empty Git repository in /Users/hiroyuki/Documents/0218/.git/
+hiroyuki@naganohiroakinoMacBook-Air 0218 % ls -a
+.		.DS_Store	Untitled-1.txt
+..		.git
+hiroyuki@naganohiroakinoMacBook-Air 0218 % ls -a .git
+.		config		objects
+..		description	refs
+.DS_Store	hooks
+HEAD		info
+hiroyuki@naganohiroakinoMacBook-Air 0218 % git init
+Reinitialized existing Git repository in /Users/hiroyuki/Documents/0218/.git/
+hiroyuki@naganohiroakinoMacBook-Air 0218 % ls
+Untitled-1.txt	test.css	test.html
+hiroyuki@naganohiroakinoMacBook-Air 0218 % ls -a
+.		.git		test.html
+..		Untitled-1.txt
+.DS_Store	test.css
+hiroyuki@naganohiroakinoMacBook-Air 0218 % git add .
+hiroyuki@naganohiroakinoMacBook-Air 0218 % git commit
+[master (root-commit) f91a2c9] initial commit
+ 4 files changed, 6 insertions(+)
+ create mode 100644 .DS_Store
+ create mode 100644 Untitled-1.txt
+ create mode 100644 test.css
+ create mode 100644 test.html
+hiroyuki@naganohiroakinoMacBook-Air 0218 % git remote add origin https://github.com/hi-nagano/0218.git
+hiroyuki@naganohiroakinoMacBook-Air 0218 % git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 646 bytes | 646.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/hi-nagano/0218.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+hiroyuki@naganohiroakinoMacBook-Air 0218 % tree
+zsh: command not found: tree
+hiroyuki@naganohiroakinoMacBook-Air 0218 % git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .DS_Store
+	modified:   Untitled-1.txt
+	modified:   test.css
+	modified:   test.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+hiroyuki@naganohiroakinoMacBook-Air 0218 % git add .
+hiroyuki@naganohiroakinoMacBook-Air 0218 % git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   .DS_Store
+	modified:   Untitled-1.txt
+	modified:   test.css
+	modified:   test.html
+
+hiroyuki@naganohiroakinoMacBook-Air 0218 % git commit -v
+hint: Waiting for your editor to close the file... 
+
+何故か入力できそう
+
+さっきなんでできなかったんだろう
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Your branch is up to date with 'origin/master'.
+#
+# Changes to be committed:
+#       modified:   .DS_Store
+#       modified:   Untitled-1.txt
+#       modified:   test.css
+#       modified:   test.html
+#
+# ------------------------ >8 ------------------------
+# Do not modify or remove the line above.
+# Everything below it will be ignored.
+diff --git a/.DS_Store b/.DS_Store
+index eccb630..d9bf871 100644
+Binary files a/.DS_Store and b/.DS_Store differ
+diff --git a/Untitled-1.txt b/Untitled-1.txt
+index 22d96a9..cbbbcb3 100644
+--- a/Untitled-1.txt
++++ b/Untitled-1.txt
+@@ -2,3 +2,5 @@
+ テキストエディタの
+ 使いやすいやつを探そう
+ こういうのも楽しい
++
++変更１
+\ No newline at end of file
+diff --git a/test.css b/test.css
+index 30d74d2..c1a768f 100644
+--- a/test.css
++++ b/test.css
+@@ -1 +1,2 @@
+-test
+\ No newline at end of file
++test
++変更１
+\ No newline at end of file
+diff --git a/test.html b/test.html
+index 30d74d2..c1a768f 100644
+--- a/test.html
++++ b/test.html
+@@ -1 +1,2 @@
+-test
+\ No newline at end of file
++test
++変更１
+\ No newline at end of file
+~                                                            
+~                                                            
+~                                                            
+~                                                            
+~                                                            
+~                                                            
+~                                                            
+recording @w
+  [復元日時2021/02/19 20:40:58]
+Last login: Fri Feb 19 20:40:54 on console
+Restored session: 2021年 2月19日 金曜日 08時23分47秒 JST
+hiroyuki@naganohiroakinoMacBook-Air 0218 % ls -a .git
+.			description
+..			hooks
+.COMMIT_EDITMSG.swp	index
+.DS_Store		info
+COMMIT_EDITMSG		logs
+HEAD			objects
+config			refs
+hiroyuki@naganohiroakinoMacBook-Air 0218 % git commit
+hint: Waiting for your editor to close the file... error: There was a problem with the editor 'vi'.
+Please supply the message using either -m or -F option.
+hiroyuki@naganohiroakinoMacBook-Air 0218 % git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   .DS_Store
+	modified:   Untitled-1.txt
+	modified:   test.css
+	modified:   test.html
+
+hiroyuki@naganohiroakinoMacBook-Air 0218 % git add .
+hiroyuki@naganohiroakinoMacBook-Air 0218 % git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   .DS_Store
+	modified:   Untitled-1.txt
+	modified:   test.css
+	modified:   test.html
+
+hiroyuki@naganohiroakinoMacBook-Air 0218 % git commit
+hint: Waiting for your editor to close the file... error: There was a problem with the editor 'vi'.
+Please supply the message using either -m or -F option.
+hiroyuki@naganohiroakinoMacBook-Air 0218 % git commit -m
+error: switch `m' requires a value
+hiroyuki@naganohiroakinoMacBook-Air 0218 % git add .
+hiroyuki@naganohiroakinoMacBook-Air 0218 % git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   .DS_Store
+	modified:   Untitled-1.txt
+	modified:   test.css
+	modified:   test.html
+
+hiroyuki@naganohiroakinoMacBook-Air 0218 % git commit -v
+[master 0cc8282] テキストを追記
+ 4 files changed, 6 insertions(+), 2 deletions(-)
+hiroyuki@naganohiroakinoMacBook-Air 0218 % git log
+commit 0cc8282e962deee51dce59a3693c90743744fa53 (HEAD -> master)
+Author: hi-nagano <hyans2007@gmail.com>
+Date:   Fri Feb 19 23:39:28 2021 +0900
+
+    テキストを追記
+    
+    使用方法練習のため
+
+commit f91a2c950b97e9711ab32f635e6187282c458208 (origin/master)
+Author: hi-nagano <hyans2007@gmail.com>
+Date:   Thu Feb 18 19:43:27 2021 +0900
+
+    initial commit
+hiroyuki@naganohiroakinoMacBook-Air 0218 % git push -u origin master                                  
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 540 bytes | 540.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/hi-nagano/0218.git
+   f91a2c9..0cc8282  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+hiroyuki@naganohiroakinoMacBook-Air 0218 % cd 0219
+cd: no such file or directory: 0219
+hiroyuki@naganohiroakinoMacBook-Air 0218 % cd .. /0219
+cd: string not in pwd: ..
+hiroyuki@naganohiroakinoMacBook-Air 0218 % cd ../ 0219
+cd: string not in pwd: ../
+hiroyuki@naganohiroakinoMacBook-Air 0218 % cd ..
+hiroyuki@naganohiroakinoMacBook-Air documents % cd 0219
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git status
+fatal: not a git repository (or any of the parent directories): .git
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git add .
+fatal: not a git repository (or any of the parent directories): .git
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git commit -v
+fatal: not a git repository (or any of the parent directories): .git
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git remote add origin https://github.com/hi-nagano/0219.git
+fatal: not a git repository (or any of the parent directories): .git
+hiroyuki@naganohiroakinoMacBook-Air 0219 % ls -a
+.		..		練習.txt
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git remote add origin https://github.com/hi-nagano/0219.git
+fatal: not a git repository (or any of the parent directories): .git
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git init
+Initialized empty Git repository in /Users/hiroyuki/Documents/0219/.git/
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git init /Users/hiroyuki/Documents/0219
+Reinitialized existing Git repository in /Users/hiroyuki/Documents/0219/.git/
+hiroyuki@naganohiroakinoMacBook-Air 0219 % ls -a
+.		.git
+..		練習.txt
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git add .
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git commit
+[master (root-commit) 965c72b] 初回のコミット
+ 1 file changed, 1 insertion(+)
+ create mode 100644 "\347\267\264\347\277\222.txt"
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git status
+On branch master
+nothing to commit, working tree clean
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'origin'
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git remote add origin https://github.com/hi-nagano/0219.git
+ git branch -M main
+git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 282 bytes | 282.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/hi-nagano/0219.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git branch -M sub1
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git push -u origin sub1
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'sub1' on GitHub by visiting:
+remote:      https://github.com/hi-nagano/0219/pull/new/sub1
+remote: 
+To https://github.com/hi-nagano/0219.git
+ * [new branch]      sub1 -> sub1
+Branch 'sub1' set up to track remote branch 'sub1' from 'origin'.
+hiroyuki@naganohiroakinoMacBook-Air 0219 % ls
+練習.txt
+hiroyuki@naganohiroakinoMacBook-Air 0219 % rm 練習.txt
+hiroyuki@naganohiroakinoMacBook-Air 0219 % ls
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git rm .
+fatal: not removing '.' recursively without -r
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git rm -r
+usage: git rm [<options>] [--] <file>...
+
+    -n, --dry-run         dry run
+    -q, --quiet           do not list removed files
+    --cached              only remove from the index
+    -f, --force           override the up-to-date check
+    -r                    allow recursive removal
+    --ignore-unmatch      exit with a zero status even if nothing matched
+
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git rm -f
+usage: git rm [<options>] [--] <file>...
+
+    -n, --dry-run         dry run
+    -q, --quiet           do not list removed files
+    --cached              only remove from the index
+    -f, --force           override the up-to-date check
+    -r                    allow recursive removal
+    --ignore-unmatch      exit with a zero status even if nothing matched
+
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git rm -f .
+fatal: not removing '.' recursively without -r
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git rm 練習.txt
+rm '練習.txt'
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git status
+On branch sub1
+Your branch is up to date with 'origin/sub1'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	deleted:    "\347\267\264\347\277\222.txt"
+
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git commit -v
+[sub1 9ccb596]  'ファイルの削除をプッシュする練習'
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 "\347\267\264\347\277\222.txt"
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git push -u origin sub1
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (2/2), 251 bytes | 251.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/hi-nagano/0219.git
+   965c72b..9ccb596  sub1 -> sub1
+Branch 'sub1' set up to track remote branch 'sub1' from 'origin'.
+hiroyuki@naganohiroakinoMacBook-Air 0219 % ls -a
+.		.git		新規２
+..		新規１
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git add .
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git commit -v
+[sub1 b95e421] '２ファイルのコミット'
+ 2 files changed, 2 insertions(+)
+ create mode 100644 "\346\226\260\350\246\217\357\274\221"
+ create mode 100644 "\346\226\260\350\246\217\357\274\222"
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git push -u sub1
+fatal: 'sub1' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+hiroyuki@naganohiroakinoMacBook-Air 0219 % git push -u origin sub1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 336 bytes | 336.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/hi-nagano/0219.git
+   9ccb596..b95e421  sub1 -> sub1
+Branch 'sub1' set up to track remote branch 'sub1' from 'origin'.
+hiroyuki@naganohiroakinoMacBook-Air 0219 % 
